@@ -170,33 +170,6 @@
         }
       }
     },
-    "hero-ui": {
-      "projectType": "library",
-      "root": "libs/hero/ui",
-      "sourceRoot": "libs/hero/ui/src",
-      "prefix": "flw",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/hero/ui/src/**/*.ts",
-              "libs/hero/ui/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/hero/ui"
-          ],
-          "options": {
-            "jestConfig": "libs/hero/ui/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "hero-api": {
       "root": "apps/hero-api",
       "sourceRoot": "apps/hero-api/src",
@@ -300,6 +273,33 @@
           ],
           "options": {
             "jestConfig": "libs/hero/api-interfaces/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "hero-hero-list": {
+      "projectType": "library",
+      "root": "libs/hero/hero-list",
+      "sourceRoot": "libs/hero/hero-list/src",
+      "prefix": "flw",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/hero/hero-list/src/**/*.ts",
+              "libs/hero/hero-list/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/hero/hero-list"
+          ],
+          "options": {
+            "jestConfig": "libs/hero/hero-list/jest.config.js",
             "passWithNoTests": true
           }
         }
