@@ -39,3 +39,6 @@ testem.log
 Thumbs.db
 
 docs
+
+# serverless
+.serverless
