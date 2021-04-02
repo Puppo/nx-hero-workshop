@@ -1,17 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
-export type HeroDTO = {
-  id: string;
-  name: string;
-  image: string;
-  powerstats: {
-    intelligence: number;
-    strength: number;
-    speed: number;
-    durability: number;
-    power: number;
-    combat: number;
-  };
-};
+import { HeroDTO } from '@flowing/hero/api-interfaces';
+
 @Controller('hero')
 export class HeroControllerController {
   private heros: HeroDTO[] = [

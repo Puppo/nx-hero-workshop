@@ -79,7 +79,8 @@
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hero-app:build"
+            "browserTarget": "hero-app:build",
+            "proxyConfig": "apps/hero-app/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -274,6 +275,31 @@
           ],
           "options": {
             "jestConfig": "libs/hero/controllers/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "hero-api-interfaces": {
+      "root": "libs/hero/api-interfaces",
+      "sourceRoot": "libs/hero/api-interfaces/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/hero/api-interfaces/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/hero/api-interfaces"
+          ],
+          "options": {
+            "jestConfig": "libs/hero/api-interfaces/jest.config.js",
             "passWithNoTests": true
           }
         }
