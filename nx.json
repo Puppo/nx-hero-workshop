@@ -1,6 +1,4 @@
 {
-  "npmScope": "flowing",
-  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": { "dependencies": "*", "devDependencies": "*" },
@@ -9,6 +7,8 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "flowing",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
@@ -19,6 +19,8 @@
     "hero-app": { "tags": [] },
     "hero-app-e2e": { "tags": [], "implicitDependencies": ["hero-app"] },
     "hero-data-access": { "tags": [] },
-    "hero-ui": { "tags": [] }
+    "hero-ui": { "tags": [] },
+    "hero-api": { "tags": [] },
+    "hero-controllers": { "tags": [] }
   }
 }
