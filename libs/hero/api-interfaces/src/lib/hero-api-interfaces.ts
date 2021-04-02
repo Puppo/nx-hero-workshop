@@ -8,6 +8,6 @@ export type HeroDTO = {
     speed: number;
     durability: number;
     power: number;
-    combat: number;
+    combat?: number;
   };
 };
